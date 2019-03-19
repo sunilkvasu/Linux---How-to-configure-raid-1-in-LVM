@@ -11,13 +11,13 @@ lvs <vg_data/lv_opt_data>
 
 
 
-# Replace failed disk in LVM
-Scenario - 1 Faulty disk is still live:
+# Replace failing disk in LVM
 
 lvconvert --replace /dev/sdb /dev/mapper/vg_data-lv_opt_data /dev/sdc
 
 
-Scenario - 2 Faulty disk is completele dead:
+
+# Replace dead disk in LVM
 
 vgreduce --removemissing <vg_data>
 
