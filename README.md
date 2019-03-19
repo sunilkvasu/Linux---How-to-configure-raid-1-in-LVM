@@ -13,6 +13,10 @@ lvs <vg_data/lv_opt_data>
 
 # Replace failing disk in LVM
 
+pvcreate </dev/sdc>
+
+vgextend <vg_data> </dev/sdc>
+
 lvconvert --replace /dev/sdb /dev/mapper/vg_data-lv_opt_data /dev/sdc
 
 
